@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Java程序必备的JavaScript知识 - Java Keep Studying</title><meta description="作为一名Java程序员，必知必懂必会的JavaScript核心知识"><meta property="og:type" content="blog"><meta property="og:title" content="Java程序必备的JavaScript知识"><meta property="og:url" content="http://yoursite.com/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/"><meta property="og:site_name" content="Java Keep Studying"><meta property="og:description" content="作为一名Java程序员，必知必懂必会的JavaScript核心知识"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://javaeden.cn/img/20200914094859.png"><meta property="article:published_time" content="2020-09-13T16:00:00.000Z"><meta property="article:modified_time" content="2020-09-14T01:50:31.704Z"><meta property="article:author" content="Java Keep Studying"><meta property="article:tag" content="JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://javaeden.cn/img/20200914094859.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/"},"headline":"Java Keep Studying","image":["https://javaeden.cn/img/20200914094859.png"],"datePublished":"2020-09-13T16:00:00.000Z","dateModified":"2020-09-14T01:50:31.704Z","author":{"@type":"Person","name":"Java Keep Studying"},"description":"作为一名Java程序员，必知必懂必会的JavaScript核心知识"}</script><link rel="canonical" href="http://yoursite.com/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/MySunShine2019/imgbed/img/20200407194421.png"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/agate.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.1.1"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Java Keep Studying</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://javaeden.cn/img/20200914094859.png" alt="Java程序必备的JavaScript知识"></span></div><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-09-13T16:00:00.000Z" title="2020-09-13T16:00:00.000Z">2020-09-14</time>发表</span><span class="level-item"><time dateTime="2020-09-14T01:50:31.704Z" title="2020-09-14T01:50:31.704Z">2020-09-14</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="level-item">8 分钟读完 (大约1178个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">Java程序必备的JavaScript知识</h1><div class="content"><h1 id="创建JavaScript对象"><a href="#创建JavaScript对象" class="headerlink" title="创建JavaScript对象"></a>创建JavaScript对象</h1><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 对象名 = &#123;</span><br><span class="line">    属性名 ： 属性值，</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    方法名 : <span class="function"><span class="keyword">function</span>(<span class="params">[形参列表]</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 方法体</span></span><br><span class="line">        [<span class="keyword">return</span> 值;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 表示形式 ： 键值对的形式来表示的</span></span><br><span class="line"><span class="comment">// 属性名 可以 采用 字符串的形式表示</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 访问属性值</span></span><br><span class="line">对象名.属性名;</span><br><span class="line"><span class="comment">// 设置/修改</span></span><br><span class="line">对象名.属性名 = 值;</span><br><span class="line"><span class="comment">// 调用方法</span></span><br><span class="line">对象名.方法名([实参列表]);</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="JavaScript常用内置对象"><a href="#JavaScript常用内置对象" class="headerlink" title="JavaScript常用内置对象"></a>JavaScript常用内置对象</h1><h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ceil(值)</td>
+<td>向上取整</td>
+</tr>
+<tr>
+<td>floor(值)</td>
+<td>向下取整</td>
+</tr>
+<tr>
+<td>round(值)</td>
+<td>四舍五入</td>
+</tr>
+<tr>
+<td>pow(x,y)</td>
+<td>求次幂</td>
+</tr>
+<tr>
+<td>random()</td>
+<td>生成[0,1)的随机数</td>
+</tr>
+</tbody></table>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>parseInt(值)</td>
+<td>将值转换为Int</td>
+</tr>
+<tr>
+<td>parseFloat(值)</td>
+<td>将值转换为Float</td>
+</tr>
+</tbody></table>
+<h2 id="RegExp正则表达式"><a href="#RegExp正则表达式" class="headerlink" title="RegExp正则表达式"></a>RegExp正则表达式</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>做数据校验</p>
+<h3 id="定义-创建正则对象"><a href="#定义-创建正则对象" class="headerlink" title="定义/创建正则对象"></a>定义/创建正则对象</h3><ul>
+<li>let 对象名 = new RegExp(“正则规则”);</li>
+<li>let 对象名 = /^正则规则$/</li>
+</ul>
+<h3 id="校验数据，判断字符串是否符合正则规则"><a href="#校验数据，判断字符串是否符合正则规则" class="headerlink" title="校验数据，判断字符串是否符合正则规则"></a>校验数据，判断字符串是否符合正则规则</h3><ul>
+<li>test(字符串|字符串变量)</li>
+</ul>
+<p>返回true表示校验成功，返回false表示校验失败，一般返回false我们都会阻止表单提交</p>
+<h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><p><img src="JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9.assets/image-20200914090135484.png" alt="image-20200914090135484"></p>
+<p>规则，我在这里不过多介绍，Java程序能看懂正则，能用就可以了。（找百度）</p>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="创建数组的格式"><a href="#创建数组的格式" class="headerlink" title="创建数组的格式"></a>创建数组的格式</h3><ul>
+<li>let 数组名 = new Array(元素列表);</li>
+<li>let 数组名 = [元素列表]；</li>
+</ul>
+<p>多个元素之间采用英文逗号”,”进行分割</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>reverse()</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>sort（）</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>删除首元素并返回</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>删除末尾元素并返回</td>
+</tr>
+<tr>
+<td>push(元素)</td>
+<td>末尾追加元素</td>
+</tr>
+<tr>
+<td>includes(元素)</td>
+<td>判断数组中是否包含指定的元素，包含返回true，不包含返回false</td>
+</tr>
+</tbody></table>
+<h2 id="Date日期"><a href="#Date日期" class="headerlink" title="Date日期"></a>Date日期</h2><h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><ul>
+<li><p>let 对象名 = new Date();  // 当前系统时间</p>
+</li>
+<li><p>let 对象名 = new Date(毫秒值);// 时间原点东八区1970-01-01 08:00:00 + 指定毫秒值后的时间 </p>
+</li>
+<li><p>let 对象名 = new Date(年,月[,日,时，分，秒]); // 注意：月取值范围[0,11]</p>
+</li>
+</ul>
+<p><img src="JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9.assets/image-20200914085409765.png" alt="image-20200914085409765"></p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="创建-2"><a href="#创建-2" class="headerlink" title="创建"></a>创建</h3><ul>
+<li>let 对象名 = new String(“值”);</li>
+<li>let 对象名 = “值”;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>replace(old,new)</td>
+<td>用旧的字符串替换新的字符串，通常用于替换铭感信息</td>
+</tr>
+<tr>
+<td>indexOf(子串)</td>
+<td>获取子串在主串中首次出现的索引</td>
+</tr>
+<tr>
+<td>lastIndexOf(子串)</td>
+<td>获取子串在主串中最后一次出现的索引</td>
+</tr>
+<tr>
+<td>length属性</td>
+<td>获取字符串中字符的个数</td>
+</tr>
+<tr>
+<td>substring(startIndex,endIndex)</td>
+<td>截取子串,[startIndex,endIndex)</td>
+</tr>
+<tr>
+<td>charAt(index)</td>
+<td>获取指定索引位置的字符</td>
+</tr>
+<tr>
+<td>split(“分割符”)</td>
+<td>将字符串按照指定的分割符进行分割，返回分割后的元素数组</td>
+</tr>
+</tbody></table>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><h3 id="创建-3"><a href="#创建-3" class="headerlink" title="创建"></a>创建</h3><ul>
+<li>let 对象名 = new Set();</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add(元素)</td>
+<td>添加元素</td>
+</tr>
+<tr>
+<td>size属性</td>
+<td>查看集合中元素的个数</td>
+</tr>
+<tr>
+<td>delete(元素)</td>
+<td>删除元素，成功返回true，失败返回false</td>
+</tr>
+<tr>
+<td>keys()</td>
+<td>获取set集合的迭代器对象</td>
+</tr>
+</tbody></table>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="创建-4"><a href="#创建-4" class="headerlink" title="创建"></a>创建</h3><ul>
+<li>let 对象名 = new Map()；</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>entries()</td>
+<td>获取Map集合对象的迭代器对象</td>
+</tr>
+<tr>
+<td>set(K,V)</td>
+<td>添加键值对元素</td>
+</tr>
+<tr>
+<td>delete(key)</td>
+<td>根据键删除键值对元素，删除成功返回true，否则false</td>
+</tr>
+<tr>
+<td>size属性</td>
+<td>获取map集合中键值对的对数</td>
+</tr>
+<tr>
+<td>get(key)</td>
+<td>通过键获取值</td>
+</tr>
+</tbody></table>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>概念：Json可以理解为就是一种特殊的字符串，用来做数据传递</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stringify(js对象)</td>
+<td>将Js对象|数组转换为json字符串</td>
+</tr>
+<tr>
+<td>parse(json字符串)</td>
+<td>将json字符串解析成js对象|数组</td>
+</tr>
+</tbody></table>
+<p>这些方法都是静态方法，直接调用即可,比如:<code>JSON.parse(json字符串)</code></p>
+<h1 id="BOM浏览器对象模型"><a href="#BOM浏览器对象模型" class="headerlink" title="BOM浏览器对象模型"></a>BOM浏览器对象模型</h1><p>BOM:Brower Object Model，就是将浏览器各个组成部分封装成js对象，方便操作浏览器。</p>
+<h2 id="Location地址栏对象"><a href="#Location地址栏对象" class="headerlink" title="Location地址栏对象"></a>Location地址栏对象</h2><h3 id="href属性"><a href="#href属性" class="headerlink" title="href属性"></a>href属性</h3><h4 id="设置-amp-获取"><a href="#设置-amp-获取" class="headerlink" title="设置&amp;获取"></a>设置&amp;获取</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取</span></span><br><span class="line">location.href</span><br><span class="line"><span class="comment">// 设置</span></span><br><span class="line">location.href = <span class="string">&quot;资源路径&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Window窗口对象"><a href="#Window窗口对象" class="headerlink" title="Window窗口对象"></a>Window窗口对象</h2><h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><h4 id="一次性定时器"><a href="#一次性定时器" class="headerlink" title="一次性定时器"></a>一次性定时器</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置一次性定时器，返回一个唯一标识，唯一标识用于清除定时器时使用</span></span><br><span class="line">唯一标识  [<span class="built_in">window</span>.]<span class="built_in">setTimeout</span>(匿名函数|<span class="string">&quot;函数名()&quot;</span>,毫秒值);  </span><br><span class="line"><span class="comment">// 清除一次性定时器</span></span><br><span class="line"><span class="built_in">clearTimeout</span>(唯一标识);</span><br></pre></td></tr></table></figure>
+
+<h4 id="循环定时器"><a href="#循环定时器" class="headerlink" title="循环定时器"></a>循环定时器</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置循环定时器.返回一个唯一标识，唯一标识用于清除定时器时使用</span></span><br><span class="line">唯一标识  <span class="built_in">setInterval</span>(匿名函数|<span class="string">&quot;函数名()&quot;</span>,毫秒值);</span><br><span class="line"><span class="comment">// 清除循环定时器</span></span><br><span class="line"><span class="built_in">clearInterval</span>(唯一标识);</span><br></pre></td></tr></table></figure>
+
+<h3 id="onload事件"><a href="#onload事件" class="headerlink" title="onload事件"></a>onload事件</h3><p>页面加载完后，会自动触发该事件。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">    [<span class="keyword">return</span> 值;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="表单校验"><a href="#表单校验" class="headerlink" title="表单校验"></a>表单校验</h2><p>技术：</p>
+<p>1、 RegExp</p>
+<ul>
+<li>创建</li>
+<li>校验</li>
+</ul>
+<p>2、DOM</p>
+<h2 id="动态广告"><a href="#动态广告" class="headerlink" title="动态广告"></a>动态广告</h2><p>技术：</p>
+<p>1、 循环定时器</p>
+<p>2、display属性</p>
+<ul>
+<li>none : 隐藏 </li>
+<li>block : 显示</li>
+</ul>
+<p>3、DOM</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Java程序必备的JavaScript知识</p><p><a href="http://yoursite.com/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/">http://yoursite.com/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Java Keep Studying</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-09-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-09-14</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/JavaScript/">JavaScript</a></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_telegram"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_reddit"></a></div><script src="https://static.addtoany.com/menu/page.js" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://javaeden.cn/img/微信图片_20200901231801.png" alt="支付宝"></span></a><a class="button is-success donate"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://javaeden.cn/img/微信图片_20200901231734.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/09/12/JavaScript%E7%AC%AC%E4%B8%80%E5%A4%A9/"><span class="level-item">JavaScript基础语法、DOM文档对象模型、JavaScript常用事件</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><script src="https://utteranc.es/client.js" repo="MySunShine2019/commentRepo" issue-term="pathname" label="some-issue-label" theme="github-light" crossorigin="anonymous" async></script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://cdn.jsdelivr.net/gh/MySunShine2019/imgbed/img/20200407194421.png" alt="Java Keep Studying"></figure><p class="title is-size-4 is-block line-height-inherit">Java Keep Studying</p><p class="is-size-6 is-block">以梦为马,诗酒趁年华</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>HuBei,WuHan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/MySunShine2019" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/MySunShine2019"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://blog.csdn.net/qq_41473905" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">blog.csdn.net</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Mysql/"><span class="level-start"><span class="level-item">Mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%A1%86%E6%9E%B6/"><span class="level-start"><span class="level-item">框架</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><a class="media-left" href="/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/"><p class="image is-64x64"><img class="fill" src="https://javaeden.cn/img/20200914094859.png" alt="Java程序必备的JavaScript知识"></p></a><div class="media-content size-small"><p><time dateTime="2020-09-13T16:00:00.000Z">2020-09-14</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/14/JavaScript%E7%AC%AC%E4%BA%8C%E5%A4%A9/">Java程序必备的JavaScript知识</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></p></div></article><article class="media"><a class="media-left" href="/2020/09/12/JavaScript%E7%AC%AC%E4%B8%80%E5%A4%A9/"><p class="image is-64x64"><img class="fill" src="https://javaeden.cn/img/20200912105410.png" alt="JavaScript基础语法、DOM文档对象模型、JavaScript常用事件"></p></a><div class="media-content size-small"><p><time dateTime="2020-09-11T16:00:00.000Z">2020-09-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/12/JavaScript%E7%AC%AC%E4%B8%80%E5%A4%A9/">JavaScript基础语法、DOM文档对象模型、JavaScript常用事件</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></p></div></article><article class="media"><a class="media-left" href="/2020/09/10/Mybatis%E8%BF%9B%E9%98%B6/"><p class="image is-64x64"><img class="fill" src="https://javaeden.cn/img/20200911215251.png" alt="Mybatis接口代理&amp;多表查询"></p></a><div class="media-content size-small"><p><time dateTime="2020-09-09T16:00:00.000Z">2020-09-10</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/10/Mybatis%E8%BF%9B%E9%98%B6/">Mybatis接口代理&amp;多表查询</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a></p></div></article><article class="media"><a class="media-left" href="/2020/09/09/Mybatis%E5%9F%BA%E7%A1%80/"><p class="image is-64x64"><img class="fill" src="https://javaeden.cn/img/20200909003919.png" alt="Mybatis框架第一天"></p></a><div class="media-content size-small"><p><time dateTime="2020-09-08T16:00:00.000Z">2020-09-09</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/09/Mybatis%E5%9F%BA%E7%A1%80/">Mybatis框架第一天</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a></p></div></article><article class="media"><a class="media-left" href="/2020/09/07/JDBC%E9%AB%98%E7%BA%A7/"><p class="image is-64x64"><img class="fill" src="https://javaeden.cn/img/20200907125300.png" alt="自定义数据库连接池&amp;常用第三方数据连接池"></p></a><div class="media-content size-small"><p><time dateTime="2020-09-06T16:00:00.000Z">2020-09-07</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/07/JDBC%E9%AB%98%E7%BA%A7/">自定义数据库连接池&amp;常用第三方数据连接池</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Java/">Java</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex" href="#创建JavaScript对象"><span class="mr-2">1</span><span>创建JavaScript对象</span></a><ul class="menu-list"><li><a class="is-flex" href="#创建"><span class="mr-2">1.1</span><span>创建</span></a></li><li><a class="is-flex" href="#使用"><span class="mr-2">1.2</span><span>使用</span></a></li></ul></li><li><a class="is-flex" href="#JavaScript常用内置对象"><span class="mr-2">2</span><span>JavaScript常用内置对象</span></a><ul class="menu-list"><li><a class="is-flex" href="#Math"><span class="mr-2">2.1</span><span>Math</span></a></li><li><a class="is-flex" href="#Number"><span class="mr-2">2.2</span><span>Number</span></a></li><li><a class="is-flex" href="#RegExp正则表达式"><span class="mr-2">2.3</span><span>RegExp正则表达式</span></a><ul class="menu-list"><li><a class="is-flex" href="#作用"><span class="mr-2">2.3.1</span><span>作用</span></a></li><li><a class="is-flex" href="#定义-创建正则对象"><span class="mr-2">2.3.2</span><span>定义/创建正则对象</span></a></li><li><a class="is-flex" href="#校验数据，判断字符串是否符合正则规则"><span class="mr-2">2.3.3</span><span>校验数据，判断字符串是否符合正则规则</span></a></li><li><a class="is-flex" href="#规则"><span class="mr-2">2.3.4</span><span>规则</span></a></li></ul></li><li><a class="is-flex" href="#Array"><span class="mr-2">2.4</span><span>Array</span></a><ul class="menu-list"><li><a class="is-flex" href="#创建数组的格式"><span class="mr-2">2.4.1</span><span>创建数组的格式</span></a></li></ul></li><li><a class="is-flex" href="#Date日期"><span class="mr-2">2.5</span><span>Date日期</span></a><ul class="menu-list"><li><a class="is-flex" href="#创建-1"><span class="mr-2">2.5.1</span><span>创建</span></a></li></ul></li><li><a class="is-flex" href="#String"><span class="mr-2">2.6</span><span>String</span></a><ul class="menu-list"><li><a class="is-flex" href="#创建-2"><span class="mr-2">2.6.1</span><span>创建</span></a></li></ul></li><li><a class="is-flex" href="#Set"><span class="mr-2">2.7</span><span>Set</span></a><ul class="menu-list"><li><a class="is-flex" href="#创建-3"><span class="mr-2">2.7.1</span><span>创建</span></a></li></ul></li><li><a class="is-flex" href="#Map"><span class="mr-2">2.8</span><span>Map</span></a><ul class="menu-list"><li><a class="is-flex" href="#创建-4"><span class="mr-2">2.8.1</span><span>创建</span></a></li></ul></li><li><a class="is-flex" href="#JSON"><span class="mr-2">2.9</span><span>JSON</span></a></li></ul></li><li><a class="is-flex" href="#BOM浏览器对象模型"><span class="mr-2">3</span><span>BOM浏览器对象模型</span></a><ul class="menu-list"><li><a class="is-flex" href="#Location地址栏对象"><span class="mr-2">3.1</span><span>Location地址栏对象</span></a><ul class="menu-list"><li><a class="is-flex" href="#设置-amp-获取"><span class="mr-2">3.1.1</span><span>设置&amp;获取</span></a></li></ul></li><li><a class="is-flex" href="#Window窗口对象"><span class="mr-2">3.2</span><span>Window窗口对象</span></a><ul class="menu-list"><li><a class="is-flex" href="#循环定时器"><span class="mr-2">3.2.1</span><span>循环定时器</span></a></li><li><a class="is-flex" href="#示例"><span class="mr-2">3.2.2</span><span>示例</span></a></li></ul></li></ul></li><li><a class="is-flex" href="#案例"><span class="mr-2">4</span><span>案例</span></a><ul class="menu-list"><li><a class="is-flex" href="#表单校验"><span class="mr-2">4.1</span><span>表单校验</span></a></li><li><a class="is-flex" href="#动态广告"><span class="mr-2">4.2</span><span>动态广告</span></a></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/09/"><span class="level-start"><span class="level-item">九月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/JDBC/"><span class="tag">JDBC</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mybatis/"><span class="tag">Mybatis</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E5%B8%B8%E7%94%A8/"><span class="tag">Mysql常用</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Java Keep Studying</a><p class="size-small"><span>&copy; 2020 Java Keep Studying</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
